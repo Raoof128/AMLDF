@@ -1,11 +1,12 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "amld-f"
 version = "1.0.0"
 description = "Adversarial Machine Learning Defense Framework"
+readme = "README.md"
 authors = [
     {name = "Raouf", email = "raouf@example.com"},
 ]
@@ -63,3 +64,8 @@ exclude = [
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = "-v --cov=backend"
+
+[tool.setuptools]
+packages = ["backend", "backend.api", "backend.engines", "backend.engines.attacks", 
+            "backend.engines.defences", "backend.engines.detectors", 
+            "backend.engines.evaluation", "backend.models", "backend.utils"]
