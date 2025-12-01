@@ -15,7 +15,9 @@ class FeatureSqueezingDefense(DefenseBase):
         Feature Squeezing: Detecting Adversarial Examples in Deep Neural Networks.
     """
 
-    def apply(self, input_data: torch.Tensor, bit_depth: int = 4) -> torch.Tensor:
+    def apply(  # type: ignore[override]
+        self, input_data: torch.Tensor, bit_depth: int = 8
+    ) -> torch.Tensor:
         """
         Apply bit depth reduction to the input data.
 

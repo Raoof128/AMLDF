@@ -20,13 +20,13 @@ class PGDAttack(AttackBase):
     def __init__(self, model: torch.nn.Module):
         self.model = model
 
-    def run(
+    def run(  # type: ignore[override]
         self,
         input_data: torch.Tensor,
         target: torch.Tensor,
-        epsilon: float = 0.3,
+        epsilon: float = 0.1,
         alpha: float = 0.01,
-        num_steps: int = 40,
+        num_steps: int = 10,
     ) -> Dict[str, Any]:
         """
         Execute PGD Attack.

@@ -37,7 +37,7 @@ class DriftDetector(DetectorBase):
             logger.error(f"Error fitting drift detector: {str(e)}")
             raise e
 
-    def detect(
+    def detect(  # type: ignore[override]
         self, input_data: np.ndarray, threshold_sigma: float = 3.0
     ) -> Dict[str, Any]:
         """

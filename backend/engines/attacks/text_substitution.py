@@ -22,7 +22,9 @@ class SynonymSubstitutionAttack(AttackBase):
     NLP Attack that substitutes words with their synonyms.
     """
 
-    def run(self, input_data: str, perturbation_rate: float = 0.3) -> Dict[str, Any]:
+    def run(  # type: ignore[override]
+        self, input_data: str, perturbation_rate: float = 0.3
+    ) -> Dict[str, Any]:
         """
         Execute the synonym substitution attack.
 

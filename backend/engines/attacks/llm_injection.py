@@ -26,7 +26,7 @@ class LLMJailbreakSimulation(AttackBase):
     Does NOT interact with real LLMs to ensure safety.
     """
 
-    def run(self, prompt: str, **kwargs) -> Dict[str, Any]:
+    def run(self, prompt: str, **kwargs: Any) -> Dict[str, Any]:  # type: ignore[override]
         """
         Simulate a jailbreak attempt.
 

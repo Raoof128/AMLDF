@@ -19,7 +19,7 @@ class AdversarialTrainingDefense(DefenseBase):
         self.attacker = FGSMAttack(model)
         self.optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 
-    def apply(
+    def apply(  # type: ignore[override]
         self, input_data: torch.Tensor, target: torch.Tensor, epochs: int = 1
     ) -> Dict[str, Any]:
         """

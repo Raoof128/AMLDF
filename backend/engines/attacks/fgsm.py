@@ -25,7 +25,7 @@ class FGSMAttack(AttackBase):
         """
         self.model = model
 
-    def run(
+    def run(  # type: ignore[override]
         self, input_data: torch.Tensor, target: torch.Tensor, epsilon: float = 0.1
     ) -> Dict[str, Any]:
         """
