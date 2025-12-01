@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+torch
+torchvision
+numpy
+scikit-learn
+pandas
+matplotlib
+nltk
+spacy
+requests
+pydantic
+python-multipart
+jinja2

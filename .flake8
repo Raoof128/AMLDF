@@ -1,0 +1,10 @@
+[flake8]
+max-line-length = 88
+extend-ignore = E203,I100,I201,I202,D100,D101,D102,D103,D104,D105,D107,D200,D205,D400,D401
+exclude = .git,__pycache__,build,dist,venv
+per-file-ignores =
+    __init__.py:F401
+    backend/engines/base.py:F401
+    backend/engines/attacks/llm_injection.py:F401
+    backend/engines/defences/feature_squeeze.py:F401
+    backend/engines/defences/adversarial_training.py:F841
